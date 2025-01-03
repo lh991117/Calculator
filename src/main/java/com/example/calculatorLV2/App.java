@@ -9,6 +9,7 @@ public class App {
 
         int num1, num2;
         char cal;
+        String ask;
         String stop;
 
         while(true){
@@ -26,11 +27,25 @@ public class App {
             c2.CalculateLV2();
             //get메서드를 통해서 결과값 출력
             System.out.println(c2.getResult());
-            //결과 출력 후 결과를 저정한 리스트의 값 삭제
-            c2.remove();
+            //결과 출력 후 결과를 저정한 리스트의 값 삭제 여부
+            while (true){
+                System.out.print("저장된 계산 결과를 삭제하시겠습니까(Y/N)");
+                ask=sc.next();
+
+                if(ask.equals("Y")){
+                    c2.remove();
+                    break;
+                }
+                else if(ask.equals("N")){
+                    break;
+                }
+                else{
+                    System.out.println("다시 입력해주세요.");
+                }
+            }
 
             //종료여부에 대한 코드
-            System.out.print("더 계산하시겠습니까?(종료를 하고싶다면 exit을 입력해주십시오 : ");
+            System.out.print("더 계산하시겠습니까?(종료를 하고싶다면 exit을 입력해주십시오) : ");
             stop=sc.next();
 
             if(stop.equals("exit")){

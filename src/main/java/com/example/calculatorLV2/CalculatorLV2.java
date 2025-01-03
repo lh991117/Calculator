@@ -5,6 +5,7 @@ import java.util.*;
 public class CalculatorLV2 {
     ArrayList<Integer> cLV2L=new ArrayList<>();
     int num1, num2;
+    int index=0;
     char cal;
     String result;
 
@@ -13,15 +14,18 @@ public class CalculatorLV2 {
         switch (cal){
             case '+':
                 cLV2L.add(num1+num2);
-                result="결과 : "+cLV2L.get(0);
+                result="결과 : "+cLV2L.get(index);
+                index++;
                 break;
             case '-':
                 cLV2L.add(num1-num2);
-                result="결과 : "+cLV2L.get(0);
+                result="결과 : "+cLV2L.get(index);
+                index++;
                 break;
             case '*':
                 cLV2L.add(num1*num2);
-                result="결과 : "+cLV2L.get(0);
+                result="결과 : "+cLV2L.get(index);
+                index++;
                 break;
             case '/':
                 if(num2==0){
@@ -29,7 +33,8 @@ public class CalculatorLV2 {
                 }
                 else{
                     cLV2L.add(num1/num2);
-                    result="결과 : "+cLV2L.get(0);
+                    result="결과 : "+cLV2L.get(index);
+                    index++;
                 }
                 break;
             default:
@@ -52,5 +57,6 @@ public class CalculatorLV2 {
 
     public void remove(){
         cLV2L.remove(0);
+        index--;
     }
 }
