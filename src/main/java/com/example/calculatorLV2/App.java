@@ -29,7 +29,7 @@ public class App {
             System.out.println(c2.getResult());
             //결과 출력 후 결과를 저정한 리스트의 값 삭제 여부
             while (true){
-                System.out.print("계산 결과를 삭제하시겠습니까(Y/N)");
+                System.out.print("저장된 계산 결과를 삭제하시겠습니까(Y/N)");
                 ask=sc.next();
 
                 if(ask.equals("Y")){
