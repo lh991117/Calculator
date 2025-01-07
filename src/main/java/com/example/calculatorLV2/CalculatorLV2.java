@@ -3,11 +3,11 @@ package com.example.calculatorLV2;
 import java.util.*;
 
 public class CalculatorLV2 {
-    ArrayList<Integer> cLV2L=new ArrayList<>();
-    int num1, num2;
-    int index=0;
-    char cal;
-    String result;
+    private ArrayList<Integer> cLV2L=new ArrayList<>();
+    private int num1, num2;
+    private int index=0;
+    private char cal;
+    private String result;
 
     public String CalculateLV2() {
         //사칙연산 실행
