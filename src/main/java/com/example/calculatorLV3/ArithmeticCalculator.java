@@ -26,4 +26,14 @@ public class ArithmeticCalculator{
         }
         return result;
     }
+
+    public String getResult(){
+        return result;
+    }
+
+    public void setResult(double num1, double num2, String s){
+        this.num1 = num1;
+        this.num2 = num2;
+        this.s = s;
+    }
 }
