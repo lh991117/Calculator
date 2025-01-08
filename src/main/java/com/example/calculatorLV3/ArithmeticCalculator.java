@@ -13,16 +13,16 @@ public class ArithmeticCalculator<T extends Number>{
         //예외처리를 이용한 사칙연산 실행
         try{
             if(OperatorType.Add.isEqual(s)){
-                result="결과 : ";
+                result="결과 : "+(num1.doubleValue()+num2.doubleValue());
             }
             else if(OperatorType.Substract.isEqual(s)){
-                result="결과 : ";
+                result="결과 : "+(num1.doubleValue()-num2.doubleValue());
             }
             else if(OperatorType.Multiply.isEqual(s)){
-                result="결과 : ";
+                result="결과 : "+(num1.doubleValue()*num2.doubleValue());
             }
             else if(OperatorType.Divide.isEqual(s)){
-                result="결과 : ";
+                result="결과 : "+(num1.doubleValue()/num2.doubleValue());
             }
         }catch(Exception e){
             result="잘못된 사칙연산을 작성하셨습니다!!";
@@ -39,8 +39,4 @@ public class ArithmeticCalculator<T extends Number>{
         this.num2 = num2;
         this.s = s;
     }
-
-//    public T Add(T num1, T num2){
-//        return num1+num2;
-//    }
 }
