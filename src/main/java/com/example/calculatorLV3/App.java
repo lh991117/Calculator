@@ -27,7 +27,6 @@ public class App {
             c3.Calculate();
             //get메서드를 통해서 결과값 출력
             System.out.println(c3.getResult());
-            //결과 출력 후 결과를 저정한 리스트의 값 삭제 여부
 
             //종료여부에 대한 코드
             System.out.print("더 계산하시겠습니까?(종료를 하고싶다면 exit을 입력해주십시오) : ");
