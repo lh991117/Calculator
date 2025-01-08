@@ -1,8 +1,11 @@
 package com.example.calculatorLV3;
 
-public class ArithmeticCalculator{
-    private double num1;
-    private double num2;
+import java.util.ArrayList;
+
+public class ArithmeticCalculator<T extends Number>{
+    private ArrayList<T> list=new ArrayList<>();
+    private T num1;
+    private T num2;
     private String s;
     private String result;
 
@@ -10,16 +13,16 @@ public class ArithmeticCalculator{
         //예외처리를 이용한 사칙연산 실행
         try{
             if(OperatorType.Add.isEqual(s)){
-                result="결과 : "+(num1+num2);
+                result="결과 : ";
             }
             else if(OperatorType.Substract.isEqual(s)){
-                result="결과 : "+(num1-num2);
+                result="결과 : ";
             }
             else if(OperatorType.Multiply.isEqual(s)){
-                result="결과 : "+(num1*num2);
+                result="결과 : ";
             }
             else if(OperatorType.Divide.isEqual(s)){
-                result="결과 : "+(num1/num2);
+                result="결과 : ";
             }
         }catch(Exception e){
             result="잘못된 사칙연산을 작성하셨습니다!!";
@@ -31,9 +34,13 @@ public class ArithmeticCalculator{
         return result;
     }
 
-    public void setResult(double num1, double num2, String s){
+    public void setResult(T num1, T num2, String s){
         this.num1 = num1;
         this.num2 = num2;
         this.s = s;
     }
+
+//    public T Add(T num1, T num2){
+//        return num1+num2;
+//    }
 }

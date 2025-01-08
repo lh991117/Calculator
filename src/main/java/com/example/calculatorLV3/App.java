@@ -4,7 +4,7 @@ import java.util.*;
 
 public class App {
     public static void main(String args[]){
-        ArithmeticCalculator c3=new ArithmeticCalculator();
+        ArithmeticCalculator<Double> c3=new ArithmeticCalculator<>();
         Scanner sc=new Scanner(System.in);
 
         double num1, num2;
