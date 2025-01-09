@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class ArithmeticCalculator<T extends Number>{
     private ArrayList<Double> list=new ArrayList<>();
+    private ArrayList<Double> chectList=new ArrayList<>();
     private T num1;
     private T num2;
     private String s;
@@ -42,5 +43,15 @@ public class ArithmeticCalculator<T extends Number>{
         this.num1 = num1;
         this.num2 = num2;
         this.s = s;
+    }
+
+    public void listCheck(T askNum){
+        chectList.clear();
+        for(int i=0;i<list.size();i++){
+            if(list.get(i)>askNum.doubleValue()){
+                chectList.add(list.get(i));
+            }
+        }
+        System.out.println(chectList);
     }
 }
