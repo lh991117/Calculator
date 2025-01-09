@@ -3,6 +3,7 @@ package com.example.calculatorLV2;
 import java.util.*;
 
 public class CalculatorLV2 {
+    //필드 캡슐화
     private ArrayList<Integer> cLV2L=new ArrayList<>();
     private int num1, num2;
     private int index=0;
@@ -45,16 +46,19 @@ public class CalculatorLV2 {
         return result;
     }
 
+    //결과값 반환
     public String getResult(){
         return result;
     }
 
+    //캡슐화된 필드에 main메서드에서 입력된 값 저장
     public void setResult(int num1, int num2, char cal){
         this.num1=num1;
         this.num2=num2;
         this.cal=cal;
     }
 
+    //List에 가장 먼저 저장된 값 제거
     public void remove(){
         cLV2L.remove(0);
         index--;
