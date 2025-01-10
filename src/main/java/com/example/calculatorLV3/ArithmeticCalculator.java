@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ArithmeticCalculator<T extends Number>{
     private ArrayList<Double> list=new ArrayList<>();
-    private ArrayList<Double> chectList=new ArrayList<>();
+    private ArrayList<Double> checkList=new ArrayList<>();
     private T num1;
     private T num2;
     private String s;
@@ -46,12 +46,21 @@ public class ArithmeticCalculator<T extends Number>{
     }
 
     public void listCheck(T askNum){
-        chectList.clear();
-        for(int i=0;i<list.size();i++){
-            if(list.get(i)>askNum.doubleValue()){
-                chectList.add(list.get(i));
-            }
-        }
-        System.out.println(chectList);
+        //람다식과 스트림을 활용한 조회 메서드 구현
+        checkList.clear();
+        list.stream()
+                //filter메서드를 통해서 list 안에서 askNum보다 큰 값을 조회
+                .filter(value -> value > askNum.doubleValue())
+                //list에서 조회한 개수만큼 checkList에 값을 추가
+                .forEach(checkList::add);
+        System.out.println(checkList);
+        //조회 메서드
+//        checkList.clear();
+//        for(int i=0;i<list.size();i++){
+//            if(list.get(i)>askNum.doubleValue()){
+//                checkList.add(list.get(i));
+//            }
+//        }
+//        System.out.println(checkList);
     }
 }
