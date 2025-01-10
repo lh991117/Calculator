@@ -9,7 +9,7 @@ public class App {
 
         double num1, num2, askNum;
         String s;
-        String ask1, ask2;
+        String ask;
         String stop;
         boolean answer;
 
@@ -76,13 +76,14 @@ public class App {
             //list값 조회 여부
             while(true){
                 System.out.print("저장된 값을 출력하고 싶으십니까?(Y/N) : ");
-                ask1=sc.nextLine();
-
-                if(ask1.equals("Y")){
+                ask=sc.nextLine();
+                
+                //boolean 타입 변수 answer을 통해서 참, 거짓으로 조회 여부를 물어보기
+                if(ask.equals("Y")){
                     answer=true;
                     break;
                 }
-                else if(ask1.equals("N")){
+                else if(ask.equals("N")){
                     answer=false;
                     break;
                 }
@@ -92,6 +93,7 @@ public class App {
             }
 
             //list에서 입력된 숫자보다 더 큰 숫자만 출력
+            //조회를 할 경우에만 실행
             if(answer){
                 while (true){
                     try{
@@ -101,10 +103,11 @@ public class App {
 
                         //list 조회
                         System.out.println(askNum+"보다 큰 결과값들 입니다!");
+                        //조회 메서드 불러오기
                         c3.listCheck(askNum);
                         break;
                     }catch(Exception e){
-                        sc.nextLine();
+                        sc.nextLine();//버퍼를 비운다(비우지 않은 경우 무한 반복 되기 떄문에)
                         System.out.println("숫자만 입력해주세요!");
                     }
                 }
