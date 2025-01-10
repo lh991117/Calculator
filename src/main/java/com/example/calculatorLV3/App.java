@@ -9,7 +9,7 @@ public class App {
 
         double num1, num2, askNum;
         String s;
-        String ask1, ask2;
+        String ask;
         String stop;
         boolean answer;
 
@@ -76,14 +76,14 @@ public class App {
             //list값 조회 여부
             while(true){
                 System.out.print("저장된 값을 출력하고 싶으십니까?(Y/N) : ");
-                ask1=sc.nextLine();
+                ask=sc.nextLine();
                 
                 //boolean 타입 변수 answer을 통해서 참, 거짓으로 조회 여부를 물어보기
-                if(ask1.equals("Y")){
+                if(ask.equals("Y")){
                     answer=true;
                     break;
                 }
-                else if(ask1.equals("N")){
+                else if(ask.equals("N")){
                     answer=false;
                     break;
                 }
